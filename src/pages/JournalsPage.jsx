@@ -51,7 +51,7 @@ const JournalsPage = () => {
           eissn: '1987-1023',
           frequency: 'Publication continue (2 numéros par an)',
           indexing: '[À confirmer - en cours d\'examen pour les principales bases de données]',
-          website: 'https://revue-rasp.org'
+          website: 'https://revue-rasp.org/'
         },
         {
           id: 'ajdi',
