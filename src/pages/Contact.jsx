@@ -12,7 +12,7 @@ const Contact = () => {
       intro:
         'If you have questions regarding BIRDs Press, its journals, editorial policies, or data protection practices, please contact us using the information below.',
       addressTitle: 'Address',
-      address: 'Sotuba ACI, Avenue des ArmÃ©es, Bamako, Mali',
+      address: 'Sotuba ACI, Avenue des Armées, Bamako, Mali',
       postalAddress: '03 BP 216 Bamako',
       hoursTitle: 'Office hours',
       hours: 'Monday – Friday, 09:00 – 17:00 (GMT)',
@@ -46,7 +46,7 @@ const Contact = () => {
       intro:
         'Pour toute question concernant BIRDs Press, ses revues, ses politiques éditoriales ou la protection des données, veuillez utiliser les informations ci-dessous.',
       addressTitle: 'Adresse',
-      address: 'Sotuba ACI, Avenue des ArmÃ©es, Bamako, Mali',
+      address: 'Sotuba ACI, Avenue des Armées, Bamako, Mali',
       postalAddress: '03 BP 216 Bamako',
       hoursTitle: 'Heures d’ouverture',
       hours: 'Lundi – Vendredi, 09h00 – 17h00',
