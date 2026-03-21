@@ -16,21 +16,21 @@ const People = () => {
       team: [
         {
           role: 'General Director',
-          name: '[To be announced]',
+          name: 'Dr Silamakan Kante',
           email: 'director@b-institute.org',
           bio: 'The General Director provides strategic oversight of BIRDs Press and ensures alignment with the mission of the Bamako Institute for Research and Development Studies.'
         },
         {
           role: 'Publishing Coordinator',
-          name: '[To be announced]',
+          name: 'Mrs. Fatoumata Tandia',
           email: 'editor@b-institute.org',
           bio: 'The Publishing Coordinator oversees day-to-day publishing operations, coordinates workflows across journals, and liaises with editorial teams.'
         },
         {
           role: 'Technical Editor',
-          name: '[To be announced]',
+          name: 'Mr. Adama Keita',
           email: 'tech@b-institute.org',
-          bio: 'The Technical Editor manages the digital publishing infrastructure, including the journal platform, metadata integrity, and integrations with indexing and archiving services.'
+          bio: 'The Technical Editor manages the digital publishing infrastructure, including the journal platform, and metadata integrity.'
         }
       ]
     },
@@ -43,21 +43,21 @@ const People = () => {
       team: [
         {
           role: 'Directeur Général',
-          name: '[À annoncer]',
+          name: 'Dr Silamakan Kante',
           email: 'director@b-institute.org',
           bio: 'Le Directeur Général assure la supervision stratégique de BIRDs Press et veille à l’alignement de ses activités avec la mission du Bamako Institute for Research and Development Studies.'
         },
         {
           role: 'Coordinateur de Publication',
-          name: '[À annoncer]',
+          name: 'Mme Fatoumata Tandia',
           email: 'editor@b-institute.org',
           bio: 'Le Coordinateur de Publication supervise les opérations quotidiennes de publication, coordonne les flux de travail entre les revues et assure la liaison avec les équipes éditoriales.'
         },
         {
           role: 'Éditeur Technique',
-          name: '[À annoncer]',
+          name: 'M. Adama Keita',
           email: 'tech@b-institute.org',
-          bio: 'L’Éditeur Technique gère l’infrastructure numérique de publication, y compris la plateforme des revues, l’intégrité des métadonnées et l’intégration avec les services d’indexation.'
+          bio: 'L’Éditeur Technique gère l’infrastructure numérique de publication, y compris la plateforme des revues, et l’intégrité des métadonnées.'
         }
       ]
     }

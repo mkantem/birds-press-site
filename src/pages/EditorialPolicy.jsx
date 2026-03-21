@@ -50,7 +50,12 @@ const EditorialPolicy = () => {
         {
           title: 'Corrections and Retractions',
           text:
-            'Journals published by BIRDs Press are expected to preserve the integrity of the scholarly record. Where necessary, corrections, clarifications, expressions of concern, or retractions may be issued in a transparent manner, depending on the seriousness of the issue and in accordance with recognized publication ethics standards.'
+            'Journals published by BIRDs Press are expected to preserve the integrity of the scholarly record. Where necessary, corrections, clarifications, expressions of concern, or retractions may be issued in a transparent manner, depending on the seriousness of the issue and in accordance with recognised publication ethics standards.'
+        },
+        {
+          title: 'Article Withdrawal',
+          text:
+            'In exceptional circumstances, an article may be withdrawn when removal of the full text is necessary to protect the integrity of the scholarly record or to address serious legal, ethical, or publication concerns. In such cases, the original content will be removed and replaced with a clearly marked withdrawal notice stating that the article has been withdrawn and linking readers to this policy. To preserve the continuity of the published record and avoid altering pagination, the replacement page will retain the article\'s original page numbers, and those page numbers will be displayed on the notice itself. If a withdrawal request is made after the final full version of the paper has been published, and the author is found to be at fault, the authors may be required to pay a penalty fee equivalent to half of the APC of the corresponding journal, where an APC applies.'
         },
         {
           title: 'Complaints and Appeals',
@@ -105,6 +110,11 @@ const EditorialPolicy = () => {
           title: 'Corrections et rétractations',
           text:
             'Les revues publiées par BIRDs Press doivent préserver l’intégrité du dossier scientifique publié. Lorsque nécessaire, des corrections, clarifications, expressions de préoccupation ou rétractations peuvent être publiées de manière transparente, selon la gravité de la situation et conformément aux standards reconnus en matière d’éthique de publication.'
+        },
+        {
+          title: 'Retrait d article',
+          text:
+            'Dans des circonstances exceptionnelles, un article peut etre retire lorsque la suppression du texte integral est necessaire pour proteger l integrite du dossier scientifique ou pour repondre a des problemes juridiques, ethiques ou editoriaux graves. Dans ce cas, le contenu original sera retire et remplace par un avis clairement identifiable indiquant que l article a ete retire, avec un lien vers la presente politique. Afin de preserver la continuite du dossier publie et de ne pas modifier la pagination, la page de remplacement conservera les numeros de pages d origine de l article, et ces numeros figureront explicitement sur l avis. Si une demande de retrait intervient apres la publication de la version finale complete de l article, et que la responsabilite de l auteur est etablie, les auteurs peuvent etre tenus de payer une penalite equivalente a la moitie des APC de la revue concernee, lorsqu un APC est applicable.'
         },
         {
           title: 'Plaintes et recours',

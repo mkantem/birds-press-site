@@ -21,7 +21,29 @@ const JournalsPage = () => {
           issn: '1987-071X',
           eissn: '1987-1023',
           frequency: 'Continuous publication (2 issues per year)',
-          indexing: '[To be confirmed - under review for major databases]',
+          indexingLabel: 'Included in the following databases and indexing services, listed here by general relevance in scholarly communication:',
+          indexingList: [
+            {
+              name: 'Crossref',
+              url: 'https://search.crossref.org/search/works?q=Revue+Africaine+des+Sciences+Sociales+et+de+la+Sante+Publique&from_ui=yes'
+            },
+            {
+              name: 'EBSCO',
+              url: 'https://openurl.ebsco.com/results?sid=ebsco:ebsco.com:search&bquery=Revue%20Africaine%20des%20Sciences%20Sociales%20et%20de%20la%20Sant%C3%A9%20Publique&linkOrigin=https://openurl.ebsco.com/'
+            },
+            {
+              name: 'African Index Medicus (WHO)',
+              url: 'https://indexmedicus.afro.who.int/Journals/Journals%20datails/Revue%20Africaine%20des%20Sciences%20Sociales%20et%20de%20la%20Sant%C3%A9%20Publique.html'
+            },
+            {
+              name: 'AJOL',
+              url: 'https://www.ajol.info/index.php/rasp'
+            },
+            {
+              name: 'OpenAIRE',
+              url: 'https://explore.openaire.eu/search/dataprovider?datasourceId=openaire____::0dad5cea296e6d91aeb7868b1d975f4c'
+            }
+          ],
           website: 'https://revue-rasp.org'
         },
         {
@@ -33,7 +55,13 @@ const JournalsPage = () => {
           issn: '1987-1236',
           eissn: '[To be confirmed]',
           frequency: 'Continuous publication (2 issues per year)',
-          indexing: '[To be confirmed - application in progress]',
+          indexingLabel: 'Included in the following databases and indexing services:',
+          indexingList: [
+            {
+              name: 'OpenAIRE',
+              url: 'https://explore.openaire.eu/search/dataprovider?datasourceId=openaire____::e0478d1c8d0a5027748d4965b55adcff'
+            }
+          ],
           website: 'https://press.b-institute.org/ajdi'
         }
       ]
@@ -50,7 +78,29 @@ const JournalsPage = () => {
           issn: '1987-071X',
           eissn: '1987-1023',
           frequency: 'Publication continue (2 numéros par an)',
-          indexing: '[À confirmer - en cours d\'examen pour les principales bases de données]',
+          indexingLabel: 'Répertoriée dans les bases de données et services d’indexation suivants, présentés ici selon leur pertinence générale dans la communication scientifique :',
+          indexingList: [
+            {
+              name: 'Crossref',
+              url: 'https://search.crossref.org/search/works?q=Revue+Africaine+des+Sciences+Sociales+et+de+la+Sante+Publique&from_ui=yes'
+            },
+            {
+              name: 'EBSCO',
+              url: 'https://openurl.ebsco.com/results?sid=ebsco:ebsco.com:search&bquery=Revue%20Africaine%20des%20Sciences%20Sociales%20et%20de%20la%20Sant%C3%A9%20Publique&linkOrigin=https://openurl.ebsco.com/'
+            },
+            {
+              name: 'African Index Medicus (OMS)',
+              url: 'https://indexmedicus.afro.who.int/Journals/Journals%20datails/Revue%20Africaine%20des%20Sciences%20Sociales%20et%20de%20la%20Sant%C3%A9%20Publique.html'
+            },
+            {
+              name: 'AJOL',
+              url: 'https://www.ajol.info/index.php/rasp'
+            },
+            {
+              name: 'OpenAIRE',
+              url: 'https://explore.openaire.eu/search/dataprovider?datasourceId=openaire____::0dad5cea296e6d91aeb7868b1d975f4c'
+            }
+          ],
           website: 'https://revue-rasp.org/'
         },
         {
@@ -61,7 +111,13 @@ const JournalsPage = () => {
           issn: '1987-1236',
           eissn: '[À confirmer]',
           frequency: 'Publication continue (2 numéros par an)',
-          indexing: '[À confirmer - en cours d\'examen pour les principales bases de données]',
+          indexingLabel: 'Répertoriée dans les bases de données et services d’indexation suivants :',
+          indexingList: [
+            {
+              name: 'OpenAIRE',
+              url: 'https://explore.openaire.eu/search/dataprovider?datasourceId=openaire____::e0478d1c8d0a5027748d4965b55adcff'
+            }
+          ],
           website: 'https://press.b-institute.org/ajdi'
         }
       ]
@@ -122,7 +178,27 @@ const JournalsPage = () => {
                         <span className="font-semibold text-gray-900">
                           {language === 'en' ? 'Indexing: ' : 'Indexation: '}
                         </span>
-                        <span className="text-gray-600">{journal.indexing}</span>
+                        {journal.indexingList ? (
+                          <div className="mt-2">
+                            <p className="text-gray-600 mb-2">{journal.indexingLabel}</p>
+                            <ol className="list-decimal list-inside space-y-1 text-gray-600">
+                              {journal.indexingList.map((entry) => (
+                                <li key={entry.name}>
+                                  <a
+                                    href={entry.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#1e3a5f] hover:underline"
+                                  >
+                                    {entry.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        ) : (
+                          <span className="text-gray-600">{journal.indexing}</span>
+                        )}
                       </div>
                     </div>
 
