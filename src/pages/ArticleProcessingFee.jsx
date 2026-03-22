@@ -11,7 +11,7 @@ const ArticleProcessingFee = () => {
       metaDescription:
         'information about article processing charges for journals published by birds press.',
       intro:
-        'BIRDs press is committed to supporting open-access scholarly publishing. article processing charges (apcs), where applicable, help cover the costs associated with editorial administration, digital publishing infrastructure, hosting, production, and long-term dissemination of published content.',
+        'BIRDs press is committed to supporting open-access scholarly publishing. Article processing charges (APCs), where applicable, help cover the costs associated with editorial administration, digital publishing infrastructure, hosting, production, and long-term dissemination of published content.',
       sections: [
         {
           title: 'Journal-specific fees',
@@ -21,12 +21,12 @@ const ArticleProcessingFee = () => {
         {
           title: 'Purpose of APCs',
           text:
-            'APCs contribute to the sustainability of the publishing programme and help support the operational costs of open-access publication. these may include platform maintenance, manuscript processing, copyediting or production support, hosting, metadata management, and online dissemination.'
+            'APCs contribute to the sustainability of the publishing programme and help support the operational costs of open-access publication. These may include platform maintenance, manuscript processing, copyediting or production support, hosting, metadata management, and online dissemination.'
         },
         {
           title: 'Editorial independence',
           text:
-            'An author’s ability to pay an article processing charge has no influence on editorial evaluation, peer review, or publication decisions. editorial decisions are made independently on the basis of scholarly merit and compliance with the journal’s standards.'
+            'An author’s ability to pay an article processing charge has no influence on editorial evaluation, peer review, or publication decisions. Editorial decisions are made independently on the basis of scholarly merit and compliance with the journal’s standards.'
         },
         {
           title: 'Payment information',
@@ -46,27 +46,27 @@ const ArticleProcessingFee = () => {
       metaDescription:
         'informations sur les frais de traitement d’article pour les revues publiées par birds press.',
       intro:
-        'BIRDs press s’engage à soutenir la publication scientifique en libre accès. les frais de traitement d’article (apc), lorsqu’ils s’appliquent, contribuent à couvrir les coûts liés à l’administration éditoriale, à l’infrastructure numérique de publication, à l’hébergement, à la production et à la diffusion durable des contenus publiés.',
+        'BIRDs press s’engage à soutenir la publication scientifique en libre accès. Les frais de traitement d’article (APC), lorsqu’ils s’appliquent, contribuent à couvrir les coûts liés à l’administration éditoriale, à l’infrastructure numérique de publication, à l’hébergement, à la production et à la diffusion durable des contenus publiés.',
       sections: [
         {
           title: 'Frais selon les revues',
           text:
-            'Les frais de traitement d’article peuvent varier d’une revue à l’autre. les auteurs sont invités à consulter le site de la revue concernée pour connaître le montant actualisé des apc ainsi que les éventuelles modalités de paiement propres à cette revue.'
+            'Les frais de traitement d’article peuvent varier d’une revue à l’autre. Les auteurs sont invités à consulter le site de la revue concernée pour connaître le montant actualisé des apc ainsi que les éventuelles modalités de paiement propres à cette revue.'
         },
         {
           title: 'Finalité des APC',
           text:
-            'Les APC contribuent à la pérennité du programme de publication et permettent de soutenir les coûts opérationnels de la publication en libre accès. ils peuvent notamment couvrir la maintenance de la plateforme, le traitement des manuscrits, l’appui à la production éditoriale, l’hébergement, la gestion des métadonnées et la diffusion en ligne.'
+            'Les APC contribuent à la pérennité du programme de publication et permettent de soutenir les coûts opérationnels de la publication en libre accès. Ils peuvent notamment couvrir la maintenance de la plateforme, le traitement des manuscrits, l’appui à la production éditoriale, l’hébergement, la gestion des métadonnées et la diffusion en ligne.'
         },
         {
           title: 'Indépendance éditoriale',
           text:
-            'La capacité d’un auteur à payer des frais de traitement d’article n’a aucune incidence sur l’évaluation éditoriale, l’examen par les pairs ou la décision de publication. les décisions éditoriales sont prises de manière indépendante sur la base de la qualité scientifique du manuscrit et de sa conformité aux standards de la revue.'
+            'La capacité d’un auteur à payer des frais de traitement d’article n’a aucune incidence sur l’évaluation éditoriale, l’examen par les pairs ou la décision de publication. Les décisions éditoriales sont prises de manière indépendante sur la base de la qualité scientifique du manuscrit et de sa conformité aux standards de la revue.'
         },
         {
           title: 'Informations de paiement',
           text:
-            'Lorsqu’un apc s’applique, les informations relatives au paiement sont communiquées après l’acceptation éditoriale et conformément aux procédures de la revue concernée. les auteurs ne doivent pas interpréter les échanges relatifs au paiement comme faisant partie du processus de décision éditoriale.'
+            'Lorsqu’un apc s’applique, les informations relatives au paiement sont communiquées après l’acceptation éditoriale et conformément aux procédures de la revue concernée. Les auteurs ne doivent pas interpréter les échanges relatifs au paiement comme faisant partie du processus de décision éditoriale.'
         },
         {
           title: 'Contact',
