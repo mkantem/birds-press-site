@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -9,15 +9,51 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [policiesDropdownOpen, setPoliciesDropdownOpen] = useState(false);
+  const [showLanguageBanner, setShowLanguageBanner] = useState(false);
+  const [mobileMenuTop, setMobileMenuTop] = useState(0);
+  const headerRef = useRef(null);
   const { language, switchLanguage, t } = useLanguage();
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    try {
+      const dismissed = localStorage.getItem('languageBannerDismissed');
+      if (!dismissed) {
+        setShowLanguageBanner(true);
+      }
+    } catch (e) {
+      setShowLanguageBanner(true);
+    }
+  }, []);
 
   useEffect(() => {
     setAboutDropdownOpen(false);
     setPoliciesDropdownOpen(false);
     setMobileMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      document.body.style.overflow = '';
+      return undefined;
+    }
+
+    const updateMobileMenuTop = () => {
+      if (headerRef.current) {
+        setMobileMenuTop(headerRef.current.getBoundingClientRect().bottom);
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    updateMobileMenuTop();
+    window.addEventListener('resize', updateMobileMenuTop);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('resize', updateMobileMenuTop);
+    };
+  }, [mobileMenuOpen, showLanguageBanner]);
 
   const toggleLanguage = () => {
     const newLang = language === 'en' ? 'fr' : 'en';
@@ -39,8 +75,34 @@ const Header = () => {
     return `/${language}${path}`;
   };
 
+  const dismissLanguageBanner = () => {
+    try {
+      localStorage.setItem('languageBannerDismissed', 'true');
+    } catch (e) {}
+    setShowLanguageBanner(false);
+  };
+
   return (
-    <header className="bg-[#1e3a5f] text-white sticky top-0 z-50 shadow-lg">
+    <header ref={headerRef} className="bg-[#1e3a5f] text-white sticky top-0 z-50 shadow-lg">
+      {showLanguageBanner && (
+        <div className="border-b border-white/10 bg-[#27486f]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-start justify-between gap-3 text-sm">
+            <p className="text-white/95 pr-2">
+              {language === 'fr'
+                ? 'Astuce : vous pouvez changer la langue dans le menu en utilisant le bouton EN/FR.'
+                : 'Tip: You can switch languages from the menu using the EN/FR button.'}
+            </p>
+            <button
+              type="button"
+              onClick={dismissLanguageBanner}
+              className="shrink-0 rounded p-1 hover:bg-white/10 transition-colors"
+              aria-label={language === 'fr' ? 'Fermer le message de langue' : 'Dismiss language message'}
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -182,8 +244,24 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden pb-4">
-            <div className="flex flex-col space-y-2">
+          <div
+            className="fixed inset-x-0 bottom-0 z-40 lg:hidden overflow-y-auto overscroll-contain bg-[#1e3a5f] px-4 pb-4 pt-4 shadow-2xl"
+            style={{ top: `${mobileMenuTop}px` }}
+          >
+            <div className="mx-auto flex max-w-7xl flex-col space-y-2">
+              <div className="mb-2 rounded-xl border border-white/20 bg-white/10 p-4">
+                <div className="mb-3 text-sm font-semibold text-white">
+                  {language === 'fr' ? 'Choisir la langue' : 'Choose language'}
+                </div>
+                <Button
+                  onClick={toggleLanguage}
+                  variant="outline"
+                  className="w-full border-white bg-white text-[#1e3a5f] hover:bg-gray-100 hover:text-[#1e3a5f]"
+                >
+                  {language === 'en' ? 'Switch to French (FR)' : 'Passer en anglais (EN)'}
+                </Button>
+              </div>
+
               <Link to={getLangPath('/home')} className="px-4 py-2 rounded hover:bg-white/10 transition-colors">
                 {t('nav.home')}
               </Link>
@@ -214,6 +292,36 @@ const Header = () => {
               <Link to={getLangPath('/policies/ethical')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
                 {t('policies.ethical')}
               </Link>
+              <Link to={getLangPath('/policies/editorial')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.editorial')}
+              </Link>
+              <Link to={getLangPath('/policies/peer-review')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.peer')}
+              </Link>
+              <Link to={getLangPath('/policies/post-decision')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.postdecision')}
+              </Link>
+              <Link to={getLangPath('/policies/apc')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.apc')}
+              </Link>
+              <Link to={getLangPath('/policies/open-access')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.openaccess')}
+              </Link>
+              <Link to={getLangPath('/policies/copyright')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.copyright')}
+              </Link>
+              <Link to={getLangPath('/policies/reviewer-guidelines')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.reviewer')}
+              </Link>
+              <Link to={getLangPath('/policies/advertising')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.advertising')}
+              </Link>
+              <Link to={getLangPath('/policies/privacy')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.privacy')}
+              </Link>
+              <Link to={getLangPath('/policies/archiving')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('policies.archiving')}
+              </Link>
               <Link to={getLangPath('/policies/ai-policy')} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
                 {t('policies.ai')}
               </Link>
@@ -228,13 +336,6 @@ const Header = () => {
                 {t('nav.contact')}
               </Link>
 
-              <Button
-                onClick={toggleLanguage}
-                variant="outline"
-                className="mx-4 border-white text-white hover:bg-white hover:text-[#1e3a5f]"
-              >
-                {language === 'en' ? 'FR' : 'EN'}
-              </Button>
             </div>
           </div>
         )}

@@ -103,15 +103,16 @@ const HomePage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative h-[450px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[420px] sm:h-[450px] flex items-center justify-center overflow-hidden bg-[#1e3a5f]">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            // backgroundImage: 'url(https://images.unsplash.com/photo-1615829875421-acafafe4aa0a)',
             backgroundImage: 'url(/assets/images/logo2.jpg)',
-            filter: 'brightness(0.4)'
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
           }}
         />
+        <div className="absolute inset-0 bg-black/45" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a5f]/80 to-[#2a4a75]/60" />
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
