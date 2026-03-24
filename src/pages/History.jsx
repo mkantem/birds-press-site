@@ -10,7 +10,7 @@ const History = () => {
     en: {
       title: 'History',
       metaDescription: 'The history and development of Bamako Institute Press.',
-      intro: 'Bamako Institute Press was founded with a vision to advance African scholarship and amplify African voices in global academic discourse.',
+      intro: 'Bamako Institute Press was founded in 2018 with a vision to advance African scholarship and amplify African voices in global academic discourse.',
       sections: [
         {
           title: 'Our founding',
@@ -33,7 +33,7 @@ const History = () => {
     fr: {
       title: 'Histoire',
       metaDescription: 'L\'histoire et le développement de la Presse de l\'Institut de Bamako.',
-      intro: 'La Presse de l\'Institut de Bamako a été fondée avec une vision de promouvoir la recherche africaine et d\'amplifier les voix africaines dans le discours académique mondial.',
+      intro: 'La Presse de l\'Institut de Bamako a été fondée en 2018 avec une vision de promouvoir la recherche africaine et d\'amplifier les voix africaines dans le discours académique mondial.',
       sections: [
         {
           title: 'Notre fondation',
