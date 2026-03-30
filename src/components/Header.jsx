@@ -89,8 +89,8 @@ const Header = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-start justify-between gap-3 text-sm">
             <p className="text-white/95 pr-2">
               {language === 'fr'
-                ? 'Astuce : vous pouvez changer la langue dans le menu en utilisant le bouton EN/FR.'
-                : 'Tip: You can switch languages from the menu using the EN/FR button.'}
+                ? 'Tip: You can switch languages from the menu using the EN/FR button.'
+                : 'Astuce : vous pouvez changer la langue dans le menu en utilisant le bouton EN/FR.'}
             </p>
             <button
               type="button"
