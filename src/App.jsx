@@ -32,6 +32,7 @@ import AuthorContributions from '@/pages/AuthorContributions';
 import News from '@/pages/News';
 import Contact from '@/pages/Contact';
 import LatestArticles from '@/pages/LatestArticles';
+import SearchPage from '@/pages/SearchPage';
 
 const AppContent = () => {
   useEffect(() => {
@@ -115,6 +116,8 @@ const AppContent = () => {
           <Route path="/:lang/actualites" element={<News />} />
           
           <Route path="/:lang/contact" element={<Contact />} />
+          <Route path="/:lang/search" element={<SearchPage />} />
+          <Route path="/:lang/recherche" element={<SearchPage />} />
           
           <Route path="/:lang/latest-articles" element={<LatestArticles />} />
           <Route path="/:lang/derniers-articles" element={<LatestArticles />} />

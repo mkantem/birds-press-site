@@ -1,9 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { useLanguage } from '@/contexts/LanguageContext';
+import Seo from '@/components/Seo';
 
 const ArticleProcessingFee = () => {
   const { language } = useLanguage();
+  const lastUpdated = language === 'fr' ? 'Dernière mise à jour : 30 mars 2026' : 'Last updated: March 30, 2026';
 
   const content = {
     en: {
@@ -16,7 +17,7 @@ const ArticleProcessingFee = () => {
         {
           title: 'Journal-specific fees',
           text:
-            'Article processing charges may vary from one journal to another. authors are advised to consult the website of the relevant journal for the current apc information and any journal-specific payment instructions.'
+            'Article processing charges may vary from one journal to another. Authors are advised to consult the website of the relevant journal for the current APC information and any journal-specific payment instructions.'
         },
         {
           title: 'Purpose of APCs',
@@ -81,14 +82,12 @@ const ArticleProcessingFee = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{c.title} - birds press</title>
-        <meta name="description" content={c.metaDescription} />
-      </Helmet>
+      <Seo title={c.title} description={c.metaDescription} />
 
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">{c.title}</h1>
+          <p className="-mt-4 mb-8 text-sm font-medium uppercase tracking-wide text-gray-500">{lastUpdated}</p>
 
           <div className="bg-white rounded-lg shadow-md p-8">
             <p className="text-gray-700 leading-relaxed mb-8">{c.intro}</p>

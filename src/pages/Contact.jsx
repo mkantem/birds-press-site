@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { useLanguage } from '@/contexts/LanguageContext';
+import Seo from '@/components/Seo';
 
 const Contact = () => {
   const { language } = useLanguage();
@@ -88,10 +88,7 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{c.title} - BIRDs Press</title>
-        <meta name="description" content={c.metaDescription} />
-      </Helmet>
+      <Seo title={c.title} description={c.metaDescription} />
 
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

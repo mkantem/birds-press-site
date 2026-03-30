@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useRSSFeed } from '@/hooks/useRSSFeed';
 import { Button } from '@/components/ui/button';
+import Seo from '@/components/Seo';
 import { formatArticleDate } from '@/lib/utils';
 import { ExternalLink, FileText } from 'lucide-react';
 
@@ -97,10 +97,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bamako Institute - {t('hero.title')}</title>
-        <meta name="description" content={t('hero.tagline')} />
-      </Helmet>
+      <Seo title={t('hero.title')} description={t('hero.tagline')} />
 
       {/* Hero Section */}
       <div className="relative h-[420px] sm:h-[450px] flex items-center justify-center overflow-hidden bg-[#1e3a5f]">

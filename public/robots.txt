@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://journals.b-institute.org/sitemap.xml
+Host: https://journals.b-institute.org

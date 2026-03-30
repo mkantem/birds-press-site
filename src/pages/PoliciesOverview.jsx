@@ -1,12 +1,12 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronRight } from 'lucide-react';
+import Seo from '@/components/Seo';
 
 const PoliciesOverview = () => {
-  const { language, t } = useLanguage();
+  const { language } = useLanguage();
+  const lastUpdated = language === 'fr' ? 'Dernière mise à jour : 30 mars 2026' : 'Last updated: March 30, 2026';
 
   const getLangPath = (path) => `/${language}${path}`;
 
@@ -26,8 +26,9 @@ const PoliciesOverview = () => {
         { name: 'Reviewer Guidelines', path: '/policies/reviewer-guidelines', description: 'Guidelines for peer reviewers' },
         { name: 'Advertising & Marketing Policy', path: '/policies/advertising', description: 'Our advertising and marketing standards' },
         { name: 'Privacy Policy', path: '/policies/privacy', description: 'How we protect your personal data' },
-        { name: 'Archiving Policy', path: '/policies/archiving', description: 'Long-term preservation of published content' }
-      ]
+        { name: 'Archiving Policy', path: '/policies/archiving', description: 'Long-term preservation of published content' },
+        { name: 'AI Policy', path: '/policies/ai-policy', description: 'How AI tools may be used in research, writing, and review' },
+      ],
     },
     fr: {
       title: 'Politiques de Publication - Aperçu',
@@ -44,23 +45,22 @@ const PoliciesOverview = () => {
         { name: 'Lignes Directrices pour les Évaluateurs', path: '/policies/reviewer-guidelines', description: 'Lignes directrices pour les évaluateurs par les pairs' },
         { name: 'Politique de Publicité et de Marketing', path: '/policies/advertising', description: 'Nos normes de publicité et de marketing' },
         { name: 'Politique de Confidentialité', path: '/policies/privacy', description: 'Comment nous protégeons vos données personnelles' },
-        { name: 'Politique d\'Archivage', path: '/policies/archiving', description: 'Préservation à long terme du contenu publié' }
-      ]
-    }
+        { name: 'Politique d\'Archivage', path: '/policies/archiving', description: 'Préservation à long terme du contenu publié' },
+        { name: 'Politique sur l\'IA', path: '/policies/ai-policy', description: 'Comment les outils d\'IA peuvent être utilisés dans la recherche, la rédaction et l\'évaluation' },
+      ],
+    },
   };
 
   const c = content[language];
 
   return (
     <>
-      <Helmet>
-        <title>{c.title} - Bamako Institute</title>
-        <meta name="description" content={c.metaDescription} />
-      </Helmet>
+      <Seo title={c.title} description={c.metaDescription} />
 
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">{c.title}</h1>
+          <p className="-mt-4 mb-8 text-sm font-medium uppercase tracking-wide text-gray-500">{lastUpdated}</p>
 
           <p className="text-lg text-gray-700 leading-relaxed mb-12">{c.intro}</p>
 

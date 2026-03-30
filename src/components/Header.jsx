@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
@@ -74,6 +74,8 @@ const Header = () => {
   const getLangPath = (path) => {
     return `/${language}${path}`;
   };
+
+  const searchPath = language === 'fr' ? '/recherche' : '/search';
 
   const dismissLanguageBanner = () => {
     try {
@@ -223,6 +225,14 @@ const Header = () => {
               {t('nav.contact')}
             </Link>
 
+            <Link
+              to={getLangPath(searchPath)}
+              className="ml-2 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20"
+            >
+              <Search className="h-4 w-4" />
+              {t('nav.search')}
+            </Link>
+
             {/* Language Switcher */}
             <Button
               onClick={toggleLanguage}
@@ -334,6 +344,9 @@ const Header = () => {
               </Link>
               <Link to={getLangPath('/contact')} className="px-4 py-2 rounded hover:bg-white/10 transition-colors">
                 {t('nav.contact')}
+              </Link>
+              <Link to={getLangPath(searchPath)} className="px-4 py-2 rounded hover:bg-white/10 transition-colors">
+                {t('nav.search')}
               </Link>
 
             </div>
