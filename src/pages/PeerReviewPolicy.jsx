@@ -62,7 +62,7 @@ const PeerReviewPolicy = () => {
     },
 
     fr: {
-      title: 'Politique d’évaluation par les pairs',
+      title: 'Politique d’évaluation',
       metaDescription: 'Politique d’évaluation par les pairs des revues publiées par BIRDs Press.',
       intro:
         'BIRDs Press soutient une évaluation par les pairs rigoureuse et équitable comme mécanisme central pour garantir la qualité scientifique, l’intégrité et la crédibilité des revues qu’elle héberge. Le processus d’évaluation par les pairs aide les éditeurs à apprécier l’originalité, la pertinence et la qualité académique des manuscrits soumis tout en fournissant aux auteurs des retours constructifs.',

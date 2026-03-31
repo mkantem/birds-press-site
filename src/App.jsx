@@ -14,6 +14,8 @@ import AboutPress from '@/pages/AboutPress';
 import History from '@/pages/History';
 import WhyPublishWithUs from '@/pages/WhyPublishWithUs';
 import People from '@/pages/People';
+import JoinEditorialBoards from '@/pages/JoinEditorialBoards';
+import GuestEditingOpportunities from '@/pages/GuestEditingOpportunities';
 import PoliciesOverview from '@/pages/PoliciesOverview';
 import EthicalPolicies from '@/pages/EthicalPolicies';
 import EditorialPolicy from '@/pages/EditorialPolicy';
@@ -67,6 +69,12 @@ const AppContent = () => {
           
           <Route path="/:lang/about/people" element={<People />} />
           <Route path="/:lang/apropos/personnel" element={<People />} />
+
+          <Route path="/:lang/about/join-editorial-boards" element={<JoinEditorialBoards />} />
+          <Route path="/:lang/apropos/rejoindre-comites-editoriaux" element={<JoinEditorialBoards />} />
+
+          <Route path="/:lang/about/guest-editing-opportunities" element={<GuestEditingOpportunities />} />
+          <Route path="/:lang/apropos/opportunites-edition-invitee" element={<GuestEditingOpportunities />} />
           
           <Route path="/:lang/policies/overview" element={<PoliciesOverview />} />
           <Route path="/:lang/politiques/apercu" element={<PoliciesOverview />} />

@@ -37,7 +37,7 @@ const AdvertisingPolicy = () => {
     },
 
     fr: {
-      title: 'Politique de publicité et de promotion',
+      title: 'Politique de publicité',
       metaDescription: 'Politique de publicité et de promotion de BIRDs Press.',
       intro:
         'BIRDs Press s’engage à préserver l’indépendance et l’intégrité de la publication scientifique.',
