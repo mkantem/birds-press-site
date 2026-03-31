@@ -15,10 +15,10 @@ const People = () => {
         'Each journal published by BIRDs Press maintains its own independent editorial board responsible for peer review and editorial decisions. The BIRDs Press team provides publishing infrastructure, coordination, and technical support for the journals hosted on the platform.',
       team: [
         {
-          role: 'General Director',
+          role: 'Director',
           name: 'Dr Silamakan Kante',
-          email: 'director@b-institute.org',
-          bio: 'The General Director provides strategic oversight of BIRDs Press and ensures alignment with the mission of the Bamako Institute for Research and Development Studies.'
+          email: 'director.press@b-institute.org',
+          bio: 'The Director of BIRDs Press provides strategic oversight of the press and supports its publishing activities in line with its academic mission and publishing standards.'
         },
         {
           role: 'Publishing Coordinator',
@@ -42,10 +42,10 @@ const People = () => {
         'Chaque revue publiée par BIRDs Press dispose de son propre comité éditorial indépendant responsable du processus d’évaluation par les pairs et des décisions éditoriales. L’équipe de BIRDs Press assure l’infrastructure de publication, la coordination et le support technique pour les revues hébergées sur la plateforme.',
       team: [
         {
-          role: 'Directeur Général',
+          role: 'Directeur',
           name: 'Dr Silamakan Kante',
-          email: 'director@b-institute.org',
-          bio: 'Le Directeur Général assure la supervision stratégique de BIRDs Press et veille à l’alignement de ses activités avec la mission du Bamako Institute for Research and Development Studies.'
+          email: 'director.press@b-institute.org',
+          bio: 'Le Directeur de BIRDs Press assure la supervision stratégique de la presse et accompagne ses activités de publication dans le respect de sa mission académique et de ses standards de publication.'
         },
         {
           role: 'Coordinateur de Publication',
@@ -81,7 +81,7 @@ const People = () => {
                 <h2 className="text-2xl font-bold text-[#1e3a5f] mb-2">{person.role}</h2>
                 <h3 className="text-xl text-gray-700 mb-4">{person.name}</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">{person.bio}</p>
-                <a 
+                <a
                   href={`mailto:${person.email}`}
                   className="flex items-center gap-2 text-[#1e3a5f] hover:underline"
                 >
