@@ -181,6 +181,15 @@ const Header = () => {
                       </Link>
                     </div>
                   </div>
+                  <a
+                    href="https://status.b-institute.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenus}
+                    className="block px-4 py-2 hover:bg-gray-100 transition-colors"
+                  >
+                    {t('about.status')}
+                  </a>
                 </div>
               )}
             </div>
@@ -358,6 +367,15 @@ const Header = () => {
               >
                 {t('about.editors.guest')}
               </Link>
+              <a
+                href="https://status.b-institute.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenus}
+                className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors"
+              >
+                {t('about.status')}
+              </a>
 
               <div className="px-4 py-2 font-semibold">{t('nav.authors')}</div>
               <Link to={getLangPath('/submission')} onClick={closeMenus} className="pl-8 pr-4 py-2 rounded hover:bg-white/10 transition-colors">
