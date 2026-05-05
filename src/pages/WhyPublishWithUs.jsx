@@ -27,7 +27,7 @@ const WhyPublishWithUs = () => {
           'Bilingual publishing options (English/French)',
           'Professional copyediting and production services',
           'Promotion through our networks and social media',
-          'Immediate DOI assignment and indexing',
+          'Indexing',
           'Long-term digital preservation'
         ]
       },
@@ -70,7 +70,7 @@ const WhyPublishWithUs = () => {
           'Options de publication bilingue (anglais/français)',
           'Services professionnels de révision et de production',
           'Promotion via nos réseaux et médias sociaux',
-          'Attribution immédiate de DOI et indexation',
+          'Indexation',
           'Préservation numérique à long terme'
         ]
       },
